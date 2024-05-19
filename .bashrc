@@ -1,5 +1,4 @@
 # .bashrc
-eval "$(starship init bash)"
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
@@ -23,6 +22,8 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 
+eval "$(starship init bash)"
+
 alias update='sudo dnf update && sudo dnf upgrade'
 alias school='cd /home/jakub/School/6_semester'
 alias neofetch='fastfetch'
@@ -33,6 +34,10 @@ alias ...='cd ../..'
 alias h='cd'
 alias l='ls -al'
 alias f='find . | grep'
+alias cpv='rsync -avh --info=progress2'
+alias bashrc='nano ~/.bashrc'
+alias count='ls * | wc -l'
+alias n='nano'
 
 alias free='free -h'
 alias du='du -h --max-depth=1'
