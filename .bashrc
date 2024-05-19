@@ -23,6 +23,7 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
 
 alias update='sudo dnf update && sudo dnf upgrade'
 alias school='cd /home/jakub/School/6_semester'
@@ -35,6 +36,8 @@ alias h='cd'
 alias l='ls -al'
 alias f='find . | grep'
 alias cpv='rsync -avh --info=progress2'
+alias cp='cp -i'
+alias mv='mv -i'
 alias bashrc='nano ~/.bashrc'
 alias count='ls * | wc -l'
 alias n='nano'
@@ -43,3 +46,4 @@ alias free='free -h'
 alias du='du -h --max-depth=1'
 alias df='df -h'
 alias ps='ps auxf'
+alias cat='bat'
